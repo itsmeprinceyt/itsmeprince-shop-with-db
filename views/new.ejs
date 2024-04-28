@@ -1,0 +1,41 @@
+<%- include('components/header', {title: 'My Page Title', author: 'Itsme Prince'}) -%>
+    
+    <a href="/">
+    <button>home</button>
+    </a>
+    <br>
+
+    <form action="/Data-Handler/new" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="item">Item:</label>
+        <input type="text" id="item" name="item" required>
+
+        <label for="uid">UID:</label>
+        <input type="number" id="uid" name="uid" required>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <legend>Is Purchase?</legend>
+        <label for="isPurchaseYes">Yes</label>
+        <input type="radio" id="isPurchaseYes" name="isPurchase" value="true" required>
+
+        <label for="isPurchaseNo">No</label>
+        <input type="radio" id="isPurchaseNo" name="isPurchase" value="false" required>
+        <legend>Is Paid?</legend>
+        <label for="isPaidYes">Yes</label>
+        <input type="radio" id="isPaidYes" name="isPaid" value="true" required>
+
+        <label for="isPaidNo">No</label>
+        <input type="radio" id="isPaidNo" name="isPaid" value="false" required>
+
+        <button type="submit">Submit</button>
+    </form>
+    
+    
+<%- include('components/footer'); -%>

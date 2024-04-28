@@ -1,0 +1,14 @@
+<%- include('components/header', {title: 'ItsMe Prince Shop'}) -%>
+
+
+    <h1>Delete</h1>
+
+    <h3>Do you want to delete?</h3>
+
+    <form method="POST" action="/Data-Handler/delete/id/del/<%=CustomerID._id%>">
+        <button type="submit" name="confirmation" value="yes">Yes</button>
+        <button type="submit" name="confirmation" value="no">No</button>
+    </form>
+    
+    
+<%- include('components/footer'); -%>

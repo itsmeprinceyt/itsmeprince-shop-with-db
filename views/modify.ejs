@@ -1,0 +1,40 @@
+<%- include('components/header', {title: 'My Page Title', author: 'Itsme Prince'}) -%>
+    
+    <a href="/">
+    <button>home</button>
+    </a>
+    <br>
+    <h1>Modify your data for <%=idNumber%></h1>
+    <form action="/Data-Handler/modify/id/save/<%=CustomerID._id%>" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required value="<%=CustomerID.name%>">
+
+        <label for="item">Item:</label>
+        <input type="text" id="item" name="item" required value="<%=CustomerID.item%>">
+
+        <label for="uid">UID:</label>
+        <input type="number" id="uid" name="uid" required value="<%=CustomerID.UID%>">
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required value="<%=CustomerID.price%>">
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required value="<%=dateProper%>">
+
+        <legend>Is Purchase?</legend>
+        <label for="isPurchaseYes">Yes</label>
+        <input type="radio" id="isPurchaseYes" name="isPurchase" value="true" required <%= S_isPurchase === "true" ? 'checked' : '' %> >
+        <label for="isPurchaseNo">No</label>
+        <input type="radio" id="isPurchaseNo" name="isPurchase" value="false" required <%= S_isPurchase === "false" ? 'checked' : '' %> >
+
+        <legend>Is Paid?</legend>
+        <label for="isPaidYes">Yes</label>
+        <input type="radio" id="isPaidYes" name="isPaid" value="true" required <%= S_isPaid === "true" ? 'checked' : '' %> >
+        <label for="isPaidNo">No</label>
+        <input type="radio" id="isPaidNo" name="isPaid" value="false" required <%= S_isPaid === "false" ? 'checked' : '' %> >
+
+        <button type="submit">Submit</button>
+    </form>
+    
+    
+<%- include('components/footer'); -%>
