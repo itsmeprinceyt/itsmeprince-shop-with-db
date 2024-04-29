@@ -14,7 +14,6 @@ a:visited{
 }
 .navbar{
     background-image: url("../images/black2.jpg");
-    /*background-image: url("./images/black2.jpg");*/
     color: white;
     position: fixed;
     font-size: 12px;
@@ -36,7 +35,7 @@ a:visited{
 }
 
 .main{
-    background-image: url("../photos/black.jpg");
+    background-image: url("../images/black.jpg");
     width: 800px;
     height: 350px;
     border-radius: 15px;
