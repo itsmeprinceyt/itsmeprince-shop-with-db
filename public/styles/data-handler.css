@@ -6,17 +6,22 @@
     transform: translate(-50%,-50%);
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
+    background-color: red;
 }
 
 .header-title{
     background-image: url("../images/black3.jpg");
+    height: 150px;
+    width: 150px;
     text-align: center;
     font-size: 8px;
     border-radius: 15px;
     margin: 0;
     padding: 2px;
     color: white;
+    transition: all 0.4s ease;
 }
 
 .header-main-base{
@@ -70,5 +75,5 @@
     
 }
 .header-tag-card-button:hover + .header-tag-card-note{
-    opacity: 1;
+    opacity: 1;   
 }
