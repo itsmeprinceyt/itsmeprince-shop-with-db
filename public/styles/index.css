@@ -1,0 +1,99 @@
+:root{
+    --blackColor: rgb(37, 37, 37);
+}
+
+body{
+    font-family: Arial;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:visited{
+    color: white;
+}
+.navbar{
+    background-image: url("../images/black2.jpg");
+    /*background-image: url("./images/black2.jpg");*/
+    color: white;
+    position: fixed;
+    font-size: 12px;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.navbar .list{
+    position: absolute;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.main{
+    background-image: url("../photos/black.jpg");
+    width: 800px;
+    height: 350px;
+    border-radius: 15px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.container{
+    width: 450px;
+    color: white;
+}
+.container h1{
+    font-size: 42px;
+    margin:0;
+    font-weight: bold;
+}
+.container p{
+    font-size: 13px;
+    margin-top: 10px;
+}
+.container h1,p{
+    text-shadow: 0px 4px 4px rgba(0,0,0,0.2);
+}
+
+
+.get-started{
+    border: none;
+    background-color: white;
+    color: var(--blackColor);
+    padding: 13px 20px 13px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 5px 5px 0px var(--blackColor);
+}
+.get-started:hover{
+    box-shadow: 5px 5px 0px white;
+    background-color: black;
+    color: white;
+}
+
+  
+.container-for-photo{
+    width: 250px;
+    display: flex;
+}
+.profile-photo{
+    width: 250px;
+    border-radius: 50%;
+
+}

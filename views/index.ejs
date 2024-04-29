@@ -1,9 +1,15 @@
 <%- include('components/header', {title: 'ItsMe Prince Shop'}) -%>
-
-
-    This is homepage
-    <a href="/Data-Handler">
-        <button>Get Started</button>
-    </a>
-    
+<%- include('components/navbar') -%>
+    <div class="main">
+        <div class="container">
+            <h1>ITSME PRINCE SHOP</h1>
+            <p>Shop where you can purchase in-game items for cheap!</p>
+            <a href="/Data-Handler">
+                <button class="get-started">Get Started</button>
+            </a>
+        </div>
+        <div class="container-for-photo">
+            <img class="profile-photo" src="images/logo.png" alt="logo">
+        </div>
+    </div>
 <%- include('components/footer'); -%>

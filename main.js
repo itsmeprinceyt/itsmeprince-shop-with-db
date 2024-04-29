@@ -10,6 +10,8 @@ const DATABASEURL = process.env.DATABASE_URL || "mongodb://localhost:27017/IMP_S
 
 app.set("view engine", "ejs")
 app.set("views",path.resolve("./views"));
+app.use(express.static('public'));
+
 app.use(express.urlencoded({ extended: true }));
 connectDB(DATABASEURL)
 
