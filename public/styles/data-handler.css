@@ -1,0 +1,74 @@
+
+.MEGACONTAINER{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header-title{
+    background-image: url("../images/black3.jpg");
+    text-align: center;
+    font-size: 8px;
+    border-radius: 15px;
+    margin: 0;
+    padding: 2px;
+    color: white;
+}
+
+.header-main-base{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.header-tag-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+.header-tag-card-button{
+    border: none;
+    background-color: white;
+    color: var(--blackColor);
+    height: 50px;
+    width: 30%;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 5px 5px 0px var(--blackColor);
+}
+
+.header-tag-card-button:hover{
+    box-shadow: 5px 5px 0px white;
+    background-color: black;
+    color: white;
+}
+
+.header-tag-card-note{
+    opacity: 0;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    width: 70%;
+    height: 50px;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    box-shadow: 5px 5px 0px var(--blackColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.header-tag-card-button:hover + .header-tag-card-note{
+    opacity: 1;
+}
