@@ -1,0 +1,46 @@
+#############
+BACKEND IMPROVEMENT
+#############
+Show only 15 users per page otherwise show next page and previous page
+
+Add search bar in details to search details
+- Dropdown
+-- Name
+-- UID
+-- Welkin
+- Input Box
+
+
+
+#############
+ADD GRAPH BUTTON IN details
+#############
+- Which shows Price change throughout all sales
+- Which shows sales of each month
+
+
+
+#############
+PAGES WHICH NEEDS TO BE ADDED
+#############
+
+NavBar(About)
+
+-- Data Handler
+--- Update (Entering DATA)
+---- Successfully Added!
+
+-- Data Handler
+--- History
+---- History (MODIFY DATA)
+----- Successfully Modified!
+---- History (DELETE DATA)
+----- Sucessfully Deleted!
+
+
+Error 404
+
+
+#############
+MAKE ALL PAGES RESPONSIVE
+#############
