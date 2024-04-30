@@ -20,7 +20,7 @@
         <tbody>
             <% for (let i = 0; i < allDataFromDB.length; i++) { %>
                 <tr>
-                    <td><%= `${i+1}`%></td>
+                    <td><%= ((currentPage - 1) * limit) + i + 1 %></td>
                     <td><%= allDataFromDB[i].name %></td>
                     <td><%= allDataFromDB[i].item %></td>
                     <td><%= allDataFromDB[i].UID %></td>
@@ -43,4 +43,15 @@
             <% } %>
         </tbody>
     </table>
+
+    <a href="/Data-handler/details?page=<%=previousPage%>&limit=15" class="previous-button">
+        <button>
+            Previous
+        </button>
+    </a>
+    <a href="/Data-handler/details?page=<%=nextPage%>&limit=15" class="next-button">
+        <button>
+            Next
+        </button>
+    </a>
 <%- include('components/footer'); -%>

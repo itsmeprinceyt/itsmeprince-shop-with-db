@@ -33,9 +33,9 @@ const createDoc = async(Name,ITEM,uid,PRICE,PURCHASEDATE,P_PURCHASEDATE,isPURCHA
     }
 }
 
-const getDoc = async()=>{
+const getDoc = async(limit,skip)=>{
     try {
-        const allData = await PurchaseModel.find();
+        const allData = await PurchaseModel.find().skip(skip).limit(limit);
         return allData;
     } catch (error) {
         console.log(error)
@@ -51,9 +51,10 @@ const getDocById = async(idNumber)=>{
     }
 }
 
-const updateDocById = async(DATABASEID,Name,ITEM,uid,PRICE,PURCHASEDATE,P_PURCHASEDATE,isPURCHASE,isPAID)=>{
+const updateDocById = async(DATABASE_ID,Name,ITEM,uid,PRICE,PURCHASEDATE,P_PURCHASEDATE,isPURCHASE,isPAID)=>{
     try {
-        const result = await PurchaseModel.updateOne({_id: DATABASEID},
+        const result = await PurchaseModel.updateOne(
+            {_id: DATABASE_ID},
             {
                 name: Name,
                 item: ITEM,
@@ -70,9 +71,9 @@ const updateDocById = async(DATABASEID,Name,ITEM,uid,PRICE,PURCHASEDATE,P_PURCHA
     }
 }
 
-const deleteDocById = async(DATABASEID)=>{
+const deleteDocById = async(DATABASE_ID)=>{
     try {
-        const result = await PurchaseModel.findByIdAndDelete(`${DATABASEID}`);
+        const result = await PurchaseModel.findByIdAndDelete(`${DATABASE_ID}`);
         console.log(result)
     } catch (error) {
         console.log(error)
