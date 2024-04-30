@@ -1,0 +1,21 @@
+<%- include('components/header', {title: 'My Page Title' , author: 'Itsme Prince' }) -%>
+    <h1>All Purchases are here</h1>
+    <a href="/">
+        <button>home</button>
+    </a>
+    <br>
+    <h1>Through What you want to search?</h1>
+    <a href="/Data-handler/search/search-menu?para=Name">
+        <button>Name</button>
+    </a>
+    <a href="/Data-handler/search/search-menu?para=UID">
+        <button>UID</button>
+    </a>
+    <a href="/Data-handler/search/search-menu?para=Item">
+        <button>Item</button>
+    </a>
+    <a href="/Data-handler/search/search-menu?para=Price">
+        <button>Price</button>
+    </a>
+
+<%- include('components/footer'); -%>

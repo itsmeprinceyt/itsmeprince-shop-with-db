@@ -79,4 +79,27 @@ const deleteDocById = async(DATABASE_ID)=>{
         console.log(error)
     }
 }
-export {PurchaseModel, createDoc, getDoc, getDocById, updateDocById, deleteDocById};
+
+const searchDatabase = async (finalDatatypeData,DataType)=>{
+    try {
+        if(DataType === "Name")
+        {
+            const result = await PurchaseModel.find({name: finalDatatypeData})
+            return result
+        }else if(DataType === 'Item'){
+            const result = await PurchaseModel.find({item: finalDatatypeData})
+            return result
+        }else if(DataType === 'UID'){
+            const result = await PurchaseModel.find({UID: finalDatatypeData})
+            return result
+        }else if(DataType === 'Price'){
+            const result = await PurchaseModel.find({price: finalDatatypeData})
+            return result
+        } 
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+export {PurchaseModel, createDoc, getDoc, getDocById, updateDocById, deleteDocById, searchDatabase};

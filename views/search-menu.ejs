@@ -1,0 +1,16 @@
+<%- include('components/header', {title: 'My Page Title' , author: 'Itsme Prince' }) -%>
+    <h1>All Purchases are here</h1>
+    <a href="/">
+        <button>home</button>
+    </a>
+    <br>
+    <h1>You're searching through <%= searchParameter %></h1>
+    
+    <form action="/Data-handler/search/filter" method="get">
+        <label for="search">Enter:</label>
+        <input type="text" name="search" id="search" placeholder="Enter <%= searchParameter %>">
+        <input type="hidden" name="para" value="<%= searchParameter %>">
+        <button type="submit">Search</button>
+    </form>
+
+<%- include('components/footer'); -%>

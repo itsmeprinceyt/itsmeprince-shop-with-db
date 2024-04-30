@@ -15,6 +15,8 @@ function takeMeToNextPage(index)
     }else if(index === 2){
         window.open('/Data-Handler/new',"_self");
     }else if(index === 3){
+        window.open('/Data-handler/search',"_self");
+    }else if(index === 4){
         window.open('/Data-handler/details',"_self");
     }
 }

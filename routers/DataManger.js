@@ -1,7 +1,11 @@
 import { PurchaseModel, createDoc, getDoc, getDocById, updateDocById, deleteDocById } from "../models/first_model.js";
 import formateDate from '../public/scripts/formatDate.js';
 import express from "express";
+import SearchManager from './SearchManager.js';
 const router = express.Router();
+
+// Adding search router to be handled by SearchManager.js
+router.use('/search', SearchManager);
 
 // Homepage of Data Handler
 router.get('/', (req, res) => {
@@ -16,8 +20,6 @@ router.get('/new',(req,res)=>{
 // Receiving POST request from new purchase page
 router.post('/new', (req, res) => {
     console.log(`Purchase initiated by: ${req.body.name}`);
-    //createDoc("Uvaish",8181881,400,"2024-04-28",true,true);
-    
     // formatting date to look nice.
     const GoodLookingDate = formateDate(req.body.date);
     createDoc(
