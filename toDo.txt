@@ -1,14 +1,6 @@
 #############
 BACKEND IMPROVEMENT
 #############
-Add search bar in details to search details
-- Dropdown
--- Name
--- UID
--- Welkin
-- Input Box
-
-#############
 ADD GRAPH BUTTON IN details
 #############
 - Which shows Price change throughout all sales

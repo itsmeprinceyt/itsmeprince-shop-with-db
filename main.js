@@ -25,6 +25,9 @@ app.get('/about',(req,res)=>{
   return res.render("about");
 })
 
+app.get('/admin',(req,res)=>{
+  return res.render("admin");
+})
 
 app.listen(port, () => {
   console.log(`Server is listening on port: http://localhost:${port}`)
