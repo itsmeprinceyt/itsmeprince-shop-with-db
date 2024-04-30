@@ -2,6 +2,7 @@ import express from "express";
 import path from "path"
 import connectDB from './connectDB/connectDB.js';
 import DataManager from './routers/DataManger.js';
+import { searchDatabaseForPrice } from "./models/first_model.js";
 
 const app = express()
 const port = process.env.PORT || 3000;
@@ -25,9 +26,18 @@ app.get('/about',(req,res)=>{
   return res.render("about");
 })
 
-app.get('/admin',(req,res)=>{
-  return res.render("admin");
-})
+app.get('/admin', async (req,res)=>{
+  const allPriceDetails = await searchDatabaseForPrice();
+  console.log(allPriceDetails)
+  let totalSum=0;
+  for(let i=0;i<allPriceDetails;i++)
+  {
+    totalSum+=allPriceDetails[i].price;
+    console.log(allPriceDetails[i].price);
+  }
+  console.log(totalSum)
+  return res.render("admin",{totalSum});
+}),
 
 app.listen(port, () => {
   console.log(`Server is listening on port: http://localhost:${port}`)

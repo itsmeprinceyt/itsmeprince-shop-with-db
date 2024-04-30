@@ -101,5 +101,13 @@ const searchDatabase = async (finalDatatypeData,DataType)=>{
     }
 }
 
+const searchDatabaseForPrice = async () => {
+    try {
+        const results = await PurchaseModel.find({}, { price: 1});
+        return results;
+    } catch (error) {
+        console.log(error)
+    }
+}
 
-export {PurchaseModel, createDoc, getDoc, getDocById, updateDocById, deleteDocById, searchDatabase};
+export {PurchaseModel, createDoc, getDoc, getDocById, updateDocById, deleteDocById, searchDatabase, searchDatabaseForPrice};
