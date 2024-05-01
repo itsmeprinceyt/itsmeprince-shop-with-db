@@ -1,13 +1,3 @@
 #############
-PAGES WHICH NEEDS TO BE ADDED
-#############
-
--- Data Handler
----- History (MODIFY DATA)
-
-Error
-404
-
-#############
 MAKE ALL PAGES RESPONSIVE
 #############
