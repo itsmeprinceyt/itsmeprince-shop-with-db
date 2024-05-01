@@ -1,5 +1,6 @@
-import { PurchaseModel, createDoc, getDoc, getDocById, updateDocById, deleteDocById } from "../models/first_model.js";
+import { PurchaseModel, createDoc, getDoc, getDocById, updateDocById, deleteDocById, countDocuments} from "../models/first_model.js";
 import formateDate from '../public/scripts/formatDate.js';
+import {calculatePageLimit} from '../public/scripts/pageLimit.js';
 import express from "express";
 import SearchManager from './SearchManager.js';
 const router = express.Router();
@@ -45,9 +46,16 @@ router.get('/success', (req,res)=>{
 
 // Showing Details (INCLUDES PAGINATION)
 router.get('/details', async (req, res) => {
-    const page = req.query.page*1 || 1;
+    const totalDocuments = await countDocuments();
+    const pageLimit = calculatePageLimit(totalDocuments, 15);
+    let page = req.query.page*1 || 1;
     const limit = req.query.limit*1 || 15;
     const skip = (page-1) * limit;
+    if (page > pageLimit) {page = Math.max(pageLimit, 1);}
+    if (page < 1 || totalDocuments === 0) {page = 1;}
+    if (req.query.page && page !== parseInt(req.query.page, 10)) {
+        return res.redirect(`/Data-handler/details?page=${page}&limit=${limit}`); 
+    }
     try {
         const allDataFromDB = await getDoc(limit, skip);
         const previousPage = page > 1 ? page - 1 : 1;

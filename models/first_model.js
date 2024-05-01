@@ -29,7 +29,7 @@ const createDoc = async(Name,ITEM,uid,PRICE,PURCHASEDATE,P_PURCHASEDATE,isPURCHA
         const result = await newPurchase.save()
         console.log(result)
     } catch(error){
-        console.log(error)
+        next(error)
     }
 }
 
@@ -38,7 +38,7 @@ const getDoc = async(limit,skip)=>{
         const allData = await PurchaseModel.find().skip(skip).limit(limit);
         return allData;
     } catch (error) {
-        console.log(error)
+        next(error)
     }
 }
 
@@ -47,7 +47,16 @@ const getDocById = async(idNumber)=>{
         const UserData= await PurchaseModel.findById(idNumber);
         return UserData;
     } catch (error) {
-        console.log(error)
+        next(error)
+    }
+}
+
+const countDocuments = async ()=>{
+    try {
+        const totalDocuments = await PurchaseModel.countDocuments();
+        return totalDocuments;
+    } catch (error) {
+        
     }
 }
 
@@ -67,7 +76,7 @@ const updateDocById = async(DATABASE_ID,Name,ITEM,uid,PRICE,PURCHASEDATE,P_PURCH
             })
         console.log(result)
     } catch (error) {
-        console.log(error)
+        next(error)
     }
 }
 
@@ -76,7 +85,7 @@ const deleteDocById = async(DATABASE_ID)=>{
         const result = await PurchaseModel.findByIdAndDelete(`${DATABASE_ID}`);
         console.log(result)
     } catch (error) {
-        console.log(error)
+        next(error)
     }
 }
 
@@ -97,7 +106,7 @@ const searchDatabase = async (finalDatatypeData,DataType)=>{
             return result
         } 
     } catch (error) {
-        console.log(error)
+        next(error)
     }
 }
 
@@ -106,8 +115,8 @@ const searchDatabaseForPrice = async () => {
         const results = await PurchaseModel.find({}, { price: 1});
         return results;
     } catch (error) {
-        console.log(error)
+        next(error)
     }
 }
 
-export {PurchaseModel, createDoc, getDoc, getDocById, updateDocById, deleteDocById, searchDatabase, searchDatabaseForPrice};
+export {PurchaseModel, createDoc, getDoc, getDocById, updateDocById, deleteDocById, searchDatabase, searchDatabaseForPrice, countDocuments};
