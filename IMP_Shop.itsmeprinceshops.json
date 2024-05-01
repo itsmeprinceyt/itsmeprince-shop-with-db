@@ -541,4 +541,20 @@
   "isPurchase": true,
   "isPaid": true,
   "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663245125d9c19eee1fe61ae"
+  },
+  "name": "Dev",
+  "item": "Welkin",
+  "UID": 884547954,
+  "price": 400,
+  "purchaseDate": "May 1, 2024",
+  "PublicpurchaseDate": {
+    "$date": "2024-05-01T00:00:00.000Z"
+  },
+  "isPurchase": true,
+  "isPaid": true,
+  "__v": 0
 }]

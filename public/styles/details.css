@@ -1,0 +1,14 @@
+.details-main-container{
+    /*background:url("../images/black.jpg");*/
+    background-color: white;
+    /*color: white;*/
+    position: relative;
+    top: 70px;
+    left:50%;
+    transform: translateX(-50%);
+    width:fit-content;
+    margin-bottom: 100px;
+    padding: 30px;
+    border-radius: 5px;
+    z-index: 1;
+}
