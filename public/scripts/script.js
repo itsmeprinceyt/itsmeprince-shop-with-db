@@ -20,14 +20,3 @@ function takeMeToNextPage(index)
         window.open('/Data-handler/details',"_self");
     }
 }
-
-
-// for setting css when hovering on button
-document.querySelectorAll('.header-tag-card-button').forEach((button, index) => {
-    button.addEventListener('mouseover', ()=> {
-        document.querySelector('.header-title').style.filter= 'invert()';
-    });
-    button.addEventListener('mouseout', ()=> {
-        document.querySelector('.header-title').style.filter = '';
-    });
-});

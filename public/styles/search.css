@@ -1,0 +1,51 @@
+.MAINSEARCHCONTAINER{
+    background: url('../images/black3.jpg');
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 200px;
+    width: 500px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px black;
+}
+.search-items-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.search-header-title{
+    margin: 0;
+    color: white;
+}
+
+.search-buttons{
+    display: flex;
+    gap: 30px;
+}
+
+.search-buttons button{
+    border: none;
+    background-color: white;
+    color: #d46c4e;
+    padding: 13px 20px 13px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 5px 5px 0px #d46c4e;
+}
+.search-buttons button:hover{
+    box-shadow: 5px 5px 0px var(--blackColor);
+    background: #d46c4e;
+    background: -webkit-linear-gradient(to right, #d46c4e, #f9ad6a, #f9e07f);
+    background: linear-gradient(to right, #d46c4e, #f9ad6a, #f9e07f);
+    color: var(--blackColor);
+}
