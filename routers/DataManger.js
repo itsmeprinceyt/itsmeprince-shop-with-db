@@ -44,6 +44,15 @@ router.get('/success', (req,res)=>{
     return res.render("success")
 })
 
+// Showing success page for successfully modification of the data
+router.get('/modifySuccess',(req,res)=>{
+    return res.render("modifySuccess")
+})
+
+router.get('/deleteSuccess',(req,res)=>{
+    return res.render("deleteSucess")
+})
+
 // Showing Details (INCLUDES PAGINATION)
 router.get('/details', async (req, res) => {
     const totalDocuments = await countDocuments();
@@ -104,7 +113,7 @@ router.post('/modify/id/save/:id',(req,res)=>{
         req.body.isPaid === 'true' ? true : false
         );
         console.log(`Purchase Data has been successfully modified`)
-        return res.redirect("/Data-Handler/success");
+        return res.redirect("/Data-Handler/modifySuccess");
     } catch (error) {
         next(error);
     }
@@ -130,7 +139,7 @@ router.post('/delete/id/del/:id',(req,res)=>{
             deleteDocById(DATABASE_ID);
             console.log(`Purchase Details Deleted for for: ${req.body.name}`);
             console.log(`Purchase Data has been successfully deleted from the database!`)
-            return res.redirect("/Data-Handler/success");
+            return res.redirect("/Data-Handler/deleteSuccess");
         }else{
             return res.redirect("/Data-Handler/details");
         }

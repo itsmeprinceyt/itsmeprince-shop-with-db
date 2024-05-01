@@ -27,7 +27,8 @@
     font-size: 13px;
 }
 
-.about-buttons button{
+.about-buttons button,
+.confirmation-delete-button{
     border: none;
     background-color: white;
     color: var(--blackColor);
@@ -41,7 +42,8 @@
     transition: all 0.4s ease;
     box-shadow: 5px 5px 0px var(--blackColor);
 }
-.about-buttons button:hover{
+.about-buttons button:hover,
+.confirmation-delete-button:hover{
     box-shadow: 5px 5px 0px white;
     background-color: var(--blackColor);
     color: white;

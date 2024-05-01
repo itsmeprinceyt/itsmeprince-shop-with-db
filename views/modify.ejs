@@ -1,9 +1,5 @@
-<%- include('components/header', {Title: "Update"}) -%>
-    
-    <a href="/">
-    <button>home</button>
-    </a>
-    <br>
+<%- include('components/header',{Title: "Update"}) -%>
+<%- include('components/navbar') -%>
     <h1>Modify your data for <%=idNumber%></h1>
     <form action="/Data-Handler/modify/id/save/<%=CustomerID._id%>" method="post">
         <label for="name">Name:</label>

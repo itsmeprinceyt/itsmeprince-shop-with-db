@@ -24,7 +24,7 @@ SearchRouter.get('/filter', async (req, res) => {
     // After checking, the finalDatatype is achieved.
     try {
         const allDataFromDB = await searchDatabase(finalDatatypeData,DataType);
-        return res.render("search-result",{allDataFromDB})
+        return res.render("search-result",{allDataFromDB,item: DataType, input: finalDatatypeData})
     } catch (error) {
         next(error)
     }

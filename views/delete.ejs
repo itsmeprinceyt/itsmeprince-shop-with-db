@@ -1,14 +1,11 @@
 <%- include('components/header',{Title: "Delete Confirmation"}) -%>
-
-
-    <h1>Delete</h1>
-
-    <h3>Do you want to delete?</h3>
-
-    <form method="POST" action="/Data-Handler/delete/id/del/<%=CustomerID._id%>">
-        <button type="submit" name="confirmation" value="yes">Yes</button>
-        <button type="submit" name="confirmation" value="no">No</button>
-    </form>
-    
-    
+    <div class="MainNoteInMiddle">
+        <h1>Do you really want to delete?</h1>
+        <div>
+            <form method="POST" action="/Data-Handler/delete/id/del/<%=CustomerID._id%>">
+                <button class="confirmation-delete-button" type="submit" name="confirmation" value="yes">Yes</button>
+                <button class="confirmation-delete-button" type="submit" name="confirmation" value="no">No</button>
+            </form>
+        </div>
+    </div>
 <%- include('components/footer') -%>

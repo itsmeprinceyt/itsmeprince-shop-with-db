@@ -2,17 +2,11 @@
 PAGES WHICH NEEDS TO BE ADDED
 #############
 
-NavBar(Admin)
----- Successfully Added!
-
 -- Data Handler
---- Search ( Search Result )
 ---- History (MODIFY DATA)
------ Successfully Modified!
----- History (DELETE DATA)
------ Sucessfully Deleted!
 
-Error 404
+Error
+404
 
 #############
 MAKE ALL PAGES RESPONSIVE

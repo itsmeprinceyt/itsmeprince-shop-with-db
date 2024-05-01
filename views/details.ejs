@@ -26,8 +26,8 @@
                             <td><%= allDataFromDB[i].UID %></td>
                             <td><%= allDataFromDB[i].price %></td>
                             <td><%= allDataFromDB[i].purchaseDate %></td>
-                            <td><%= allDataFromDB[i].isPurchase %></td>
-                            <td><%= allDataFromDB[i].isPaid %></td>
+                            <td><%= allDataFromDB[i].isPurchase === true? 'Done' : 'Pending' %></td>
+                            <td><%= allDataFromDB[i].isPaid === true ? 'Paid' : 'Not Paid' %></td>
                             <td>
                                 <a href="/Data-Handler/modify/<%=allDataFromDB[i]._id%>">
                                     <button class="<%= allDataFromDB[i]._id %> modify-button">Modify</button>
