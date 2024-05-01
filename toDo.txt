@@ -3,13 +3,11 @@ PAGES WHICH NEEDS TO BE ADDED
 #############
 
 NavBar(About)
-
--- Data Handler
---- Update (Entering DATA)
+NavBar(Admin)
 ---- Successfully Added!
 
 -- Data Handler
---- History
+--- Search ( Search Result )
 ---- History (MODIFY DATA)
 ----- Successfully Modified!
 ---- History (DELETE DATA)
