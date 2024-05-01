@@ -2,7 +2,6 @@
 PAGES WHICH NEEDS TO BE ADDED
 #############
 
-NavBar(About)
 NavBar(Admin)
 ---- Successfully Added!
 
