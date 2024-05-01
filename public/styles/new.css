@@ -1,0 +1,77 @@
+.add-menu-container{
+    background:rgb(175, 175, 175)url("../images/black.jpg");
+    color: white;
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    padding: 30px;
+    border-radius: 5px;
+}
+.form-header{
+    margin: 0;
+}
+.form-paragraph{
+    margin: 0;
+    text-shadow: none;
+    font-size: 12px;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+.form-area{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+}
+
+.form-side-image{
+    border-radius: 5px;
+    background-color: white;
+    width: 60%;
+}
+
+.form-submit-button{
+    margin-top: 10px;
+    border: none;
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 5px 5px 0px #ea4492;
+    
+}
+.form-submit-button:hover{
+    background: #ea4492;
+    background: -webkit-linear-gradient(to right, #ea4492, #ff7fbb, #ff9cda);
+    background: linear-gradient(to right, #ea4492, #ff7fbb, #ff9cda);
+    box-shadow: 5px 5px 0px white;
+}
+.form-input-title,
+#isPurchased,
+#isPaid{
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+#name,
+#item,
+#uid,
+#price,
+#date{
+    background-color: rgb(255, 255, 255);
+    border-style: none;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline: none;
+}

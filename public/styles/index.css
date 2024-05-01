@@ -27,6 +27,12 @@ a:visited{
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.navbar .home{
+    display: flex;
+    gap: 10px;
+}
+
 .navbar .list{
     position: absolute;
     right: 10px;
@@ -78,12 +84,15 @@ a:visited{
     margin-top: 10px;
     cursor: pointer;
     transition: all 0.4s ease;
-    box-shadow: 5px 5px 0px var(--blackColor);
+    box-shadow: 5px 5px 0px #A770EF;
 }
 .get-started:hover{
     box-shadow: 5px 5px 0px white;
-    background-color: black;
-    color: white;
+    background: #A770EF;
+    background: -webkit-linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);
+    background: linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);
+
+    color: var(--blackColor);
 }
 
   

@@ -1,41 +1,46 @@
-<%- include('components/header', {title: 'My Page Title', author: 'Itsme Prince'}) -%>
+<%- include('components/header',{Title: "Adding"}) -%>
+<%- include('components/navbar') -%>
+    <div class="add-menu-container">
+        <h1 class="form-header">ItsMe Prince Shop</h1>
+        <p class="form-paragraph">To enter the details of the purchase, please fill out all the neccessary details and hit <strong>Submit!</strong></p>
+        <div class="form-container">
+            <div>
+            <form action="/Data-Handler/new" method="post" class="form-area">
+                <label class="form-input-title" for="name">Enter Name</label>
+                <input type="text" id="name" name="name" required>
     
-    <a href="/">
-    <button>home</button>
-    </a>
-    <br>
-
-    <form action="/Data-Handler/new" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="item">Item:</label>
-        <input type="text" id="item" name="item" required>
-
-        <label for="uid">UID:</label>
-        <input type="number" id="uid" name="uid" required>
-
-        <label for="price">Price:</label>
-        <input type="number" id="price" name="price" required>
-
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" required>
-
-        <legend>Is Purchased?</legend>
-        <label for="isPurchaseYes">Yes</label>
-        <input type="radio" id="isPurchaseYes" name="isPurchase" value="true" required>
-
-        <label for="isPurchaseNo">No</label>
-        <input type="radio" id="isPurchaseNo" name="isPurchase" value="false" required>
-        <legend>Is Paid?</legend>
-        <label for="isPaidYes">Yes</label>
-        <input type="radio" id="isPaidYes" name="isPaid" value="true" required>
-
-        <label for="isPaidNo">No</label>
-        <input type="radio" id="isPaidNo" name="isPaid" value="false" required>
-
-        <button type="submit">Submit</button>
-    </form>
+                <label class="form-input-title" for="item">Enter Item</label>
+                <input type="text" id="item" name="item" required>
     
+                <label class="form-input-title" for="uid">UID</label>
+                <input type="number" id="uid" name="uid" required>
     
+                <label class="form-input-title" for="price">Price in &#8377;</label>
+                <input type="number" id="price" name="price" required>
+    
+                <label class="form-input-title" for="date">Date of Purchase</label>
+                <input type="date" id="date" name="date" required>
+                
+                <div>
+                    <legend id="isPurchased">Is Purchased?</legend>
+                    <label for="isPurchaseYes">✔️</label>
+                    <input type="radio" id="isPurchaseYes" name="isPurchase" value="true" required>
+                    <label for="isPurchaseNo">❌</label>
+                    <input type="radio" id="isPurchaseNo" name="isPurchase" value="false" required>
+                </div>
+    
+                <div>
+                    <legend id="isPaid">Is Paid?</legend>
+                    <label for="isPaidYes">✔️</label>
+                    <input type="radio" id="isPaidYes" name="isPaid" value="true" required>
+                    <label for="isPaidNo">❌</label>
+                    <input type="radio" id="isPaidNo" name="isPaid" value="false" required>
+                </div>
+                <button type="submit" class="form-submit-button">Submit</button>
+            </form>
+        </div>
+            <div class="form-side-image">
+                
+            </div>
+        </div>
 <%- include('components/footer'); -%>

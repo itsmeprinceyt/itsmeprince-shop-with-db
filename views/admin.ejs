@@ -1,4 +1,6 @@
-<%- include('components/header') -%>
+<%- include('components/header',{Title: "Admin"}) -%>
+<%- include('components/navbar') -%>
     <h1>hello</h1>
-    <h1>Total earning up until now is: <%=totalSum%></h1>
+    <h1>Total Purchases up until now is: <%=totalPurchases%>  </h1>
+    <h1>Total earning up until now is: &#8377; <%=totalSum%>  </h1>
 <%- include('components/footer'); -%>

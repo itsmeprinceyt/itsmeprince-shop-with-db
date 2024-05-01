@@ -1,40 +1,39 @@
-<%- include('components/header') -%>
+<%- include('components/header',{Title: "Menu"}) -%>
 <%- include('components/navbar') -%>
     <div class="MEGACONTAINER">
-        <div class="header-title">
-                <h1>Hey! Hope you're doing well!</h1>
-        </div>
+        <div class="header-title">Hey! Hope you're doing well!</div>
         <div class="header-main-base">
             <div class="header-tag-card">
-                <button class="header-tag-card-button">Home</button>
-                <div class="header-tag-card-note">
-                    This takes you to Homepage!
-                </div>
+                <button class="header-tag-card-button btn-1"><img src="icons/home.png"></button>
+            </div>
+            <div class="header-tag-card-note">
+                This takes you to Homepage!
             </div>
             <div class="header-tag-card">
-                <button class="header-tag-card-button">Purchase</button>
-                <div class="header-tag-card-note">
-                    You can purchase an item through our Discord Server!
-                </div>
+                <button class="header-tag-card-button btn-2"><img src="icons/purchase.png"></button>
+            </div>
+            <div class="header-tag-card-note">
+                You can purchase an item through our Discord Server!
             </div>
             <div class="header-tag-card">
-                <button class="header-tag-card-button">Add</button>
-                <div class="header-tag-card-note">
-                    Add a new purchase order details!
-                </div>
+                <button class="header-tag-card-button btn-3"><img src="icons/add.png"></button>
+            </div>
+            <div class="header-tag-card-note">
+                Add a new purchase order details!
             </div>
             <div class="header-tag-card">
-                <button class="header-tag-card-button">Search</button>
-                <div class="header-tag-card-note">
-                    You can search the database!
-                </div>
+                <button class="header-tag-card-button btn-4"><img src="icons/search.png"></button>
+            </div>
+            <div class="header-tag-card-note">
+                You can search the database!
             </div>
             <div class="header-tag-card">
-                <button class="header-tag-card-button">Show</button>
-                <div class="header-tag-card-note">
-                    Show all the purchase details up until now!
-                </div>
+                <button class="header-tag-card-button btn-5"><img src="icons/show.png"></button>
+            </div>
+            <div class="header-tag-card-note">
+                Show all the purchase details up until now!
             </div>
         </div>
+            
     </div>
 <%- include('components/footer'); -%>

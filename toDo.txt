@@ -1,14 +1,4 @@
 #############
-BACKEND IMPROVEMENT
-#############
-ADD GRAPH BUTTON IN details
-#############
-- Which shows Price change throughout all sales
-- Which shows sales of each month
-
-
-
-#############
 PAGES WHICH NEEDS TO BE ADDED
 #############
 
@@ -25,9 +15,7 @@ NavBar(About)
 ---- History (DELETE DATA)
 ----- Sucessfully Deleted!
 
-
 Error 404
-
 
 #############
 MAKE ALL PAGES RESPONSIVE

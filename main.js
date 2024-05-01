@@ -27,16 +27,16 @@ app.get('/about',(req,res)=>{
 })
 
 app.get('/admin', async (req,res)=>{
+  console.log(`Prices from the database has been fetched!`)
   const allPriceDetails = await searchDatabaseForPrice();
-  console.log(allPriceDetails)
   let totalSum=0;
-  for(let i=0;i<allPriceDetails;i++)
+  let totalPurchases=0;
+  for(let i=0;i<allPriceDetails.length;i++)
   {
+    totalPurchases+=1;
     totalSum+=allPriceDetails[i].price;
-    console.log(allPriceDetails[i].price);
   }
-  console.log(totalSum)
-  return res.render("admin",{totalSum});
+  return res.render("admin",{totalSum,totalPurchases});
 }),
 
 app.listen(port, () => {
