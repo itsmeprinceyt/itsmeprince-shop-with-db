@@ -45,13 +45,13 @@ app.get('/admin', async (req,res)=>{
 
 // When you open URL which does not exists
 app.use((req, res, next) => {
-  res.status(404).render('404');
+  res.status(404).render('components/404');
 });
 
 // When any kind of error occurs like when using async function or any type of error
 app.use((err, req, res, next) => {
   console.error(err);
-  res.status(500).render('error', { error: err });
+  res.status(500).render('components/error', { error: err });
 });
 
 app.listen(port, () => {

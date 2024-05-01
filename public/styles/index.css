@@ -94,11 +94,9 @@ a:visited{
     background: #A770EF;
     background: -webkit-linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);
     background: linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);
-
     color: var(--blackColor);
 }
 
-  
 .container-for-photo{
     width: 250px;
     display: flex;

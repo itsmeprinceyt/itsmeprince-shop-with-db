@@ -4,7 +4,7 @@
         <h1 class="details-header-title">ItsMe Prince | Purchases</h1>
         <p class="details-paragraph">Here, you can navigate through all the purchases and modify or delete as your require!</p>
         <div class="details-main-table">
-            <table>
+            <table class="details-table">
                 <theader>
                     <th>S.N</th>
                     <th>Name</th>
@@ -43,7 +43,8 @@
                     <% } %>
                 </tbody>
             </table>
-
+        </div>
+        <div class="button-below-data">
             <a href="/Data-handler/details?page=<%=previousPage%>&limit=15" class="previous-button">
                 <button>
                     Previous

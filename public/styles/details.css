@@ -1,7 +1,6 @@
 .details-main-container{
-    /*background:url("../images/black.jpg");*/
-    background-color: white;
-    /*color: white;*/
+    background:url("../images/black.jpg");
+    color: white;
     position: relative;
     top: 70px;
     left:50%;
@@ -11,4 +10,80 @@
     padding: 30px;
     border-radius: 5px;
     z-index: 1;
+}
+.details-header-title{
+    margin: 0;
+}
+.details-paragraph{
+    margin: 0;
+    font-size: 12px;
+}
+.details-main-table{
+    margin-top: 20px;
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.details-main-table th {
+    background-color: black; 
+    color: white;
+    font-size: 13px; 
+    border: 1px solid rgba(255, 255, 255, 0.192);
+    padding: 5px;
+}
+
+.details-main-table td, .details-main-table tr{
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.652);
+    color: black;
+    text-align: center;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right:10px;
+}
+
+.details-table{
+    border-collapse: collapse;
+}
+
+.modify-button,
+.delete-button{
+    background: #84ff00;
+    background: -webkit-linear-gradient(to right, #84ff00, #99ff2b, #aaff4f);
+    background: linear-gradient(to right, #84ff00, #99ff2b, #aaff4f);
+    border: none;
+    color: black;
+    padding: 5px;
+    border-radius: 3px;
+}
+.delete-button{
+    background: #ff0000;
+    background: -webkit-linear-gradient(to right, #ff0000, #ff2828, #770202);
+    background: linear-gradient(to right, #ff0000, #ff2828,
+    #c90000);
+    color: white;
+}
+.button-below-data{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-below-data button{
+    border: none;
+    background-color: white;
+    color: #2193b0;
+    padding: 13px 20px 13px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 5px 5px 0px #2193b0;
+}
+.button-below-data button:hover{
+    box-shadow: 5px 5px 0px white;
+    background: #2193b0;
+    background: -webkit-linear-gradient(to right, #2193b0, #53b9cf, #6dd5ed);
+    background: linear-gradient(to right, #2193b0, #53b9cf, #6dd5ed);
+    color: black;
 }
