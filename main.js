@@ -27,17 +27,32 @@ app.get('/about',(req,res)=>{
 })
 
 app.get('/admin', async (req,res)=>{
-  console.log(`Prices from the database has been fetched!`)
-  const allPriceDetails = await searchDatabaseForPrice();
-  let totalSum=0;
-  let totalPurchases=0;
-  for(let i=0;i<allPriceDetails.length;i++)
-  {
-    totalPurchases+=1;
-    totalSum+=allPriceDetails[i].price;
+  try {
+    const allPriceDetails = await searchDatabaseForPrice();
+    let totalSum=0;
+    let totalPurchases=0;
+    for(let i=0;i<allPriceDetails.length;i++)
+    {
+      totalPurchases+=1;
+      totalSum+=allPriceDetails[i].price;
+    }
+    console.log(`Prices from the database has been fetched!`)
+    return res.render("admin",{totalSum,totalPurchases});
+  } catch (error) {
+    next(error);
   }
-  return res.render("admin",{totalSum,totalPurchases});
 }),
+
+// When you open URL which does not exists
+app.use((req, res, next) => {
+  res.status(404).render('404');
+});
+
+// When any kind of error occurs like when using async function or any type of error
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(500).render('error', { error: err });
+});
 
 app.listen(port, () => {
   console.log(`Server is listening on port: http://localhost:${port}`)

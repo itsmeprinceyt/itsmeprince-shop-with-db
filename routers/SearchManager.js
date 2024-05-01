@@ -26,8 +26,7 @@ SearchRouter.get('/filter', async (req, res) => {
         const allDataFromDB = await searchDatabase(finalDatatypeData,DataType);
         return res.render("search-result",{allDataFromDB})
     } catch (error) {
-        console.error(error);
-        res.status(500).send('Error retrieving data');
+        next(error)
     }
 });
 
