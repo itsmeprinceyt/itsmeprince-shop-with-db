@@ -1,13 +1,15 @@
 .add-menu-container{
     background:rgb(175, 175, 175)url("../images/black.jpg");
     color: white;
-    position: fixed;
+    position: relative;
     top: 70px;
     left: 50%;
     transform: translateX(-50%);
     width: 500px;
+    margin-bottom: 100px;
     padding: 30px;
     border-radius: 5px;
+    z-index: 1;
 }
 .form-header{
     margin: 0;
@@ -21,6 +23,7 @@
 .form-container{
     display: flex;
     flex-direction: row;
+    gap: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     margin-top: 20px;
 }
@@ -30,36 +33,44 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    width: 200px;
     
 }
 
 .form-side-image{
+    margin-top: 10px;
+    margin-bottom:6px;
     border-radius: 5px;
-    background-color: white;
-    width: 60%;
+    background: url("../images/zhongli.jpg");
+    background-position: center; /* Center the background image */
+    background-size:cover;
+    width: 300px;
 }
 
 .form-submit-button{
     margin-top: 10px;
     border: none;
     height: 40px;
-    width: 120px;
+    width: 180px;
     border-radius: 10px;
     cursor: pointer;
     background-color: white;
+    color: #ea4492;
     box-shadow: 5px 5px 0px #ea4492;
-    
+    transition: all 0.4s ease;
 }
 .form-submit-button:hover{
     background: #ea4492;
     background: -webkit-linear-gradient(to right, #ea4492, #ff7fbb, #ff9cda);
     background: linear-gradient(to right, #ea4492, #ff7fbb, #ff9cda);
     box-shadow: 5px 5px 0px white;
+    color: var(--blackColor);
 }
 .form-input-title,
 #isPurchased,
 #isPaid{
     font-size: 12px;
+    margin-top: 0;
     margin-bottom: 3px;
 }
 

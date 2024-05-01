@@ -26,6 +26,7 @@ a:visited{
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
+    z-index: 2;
 }
 
 .navbar .home{
@@ -77,7 +78,7 @@ a:visited{
 .get-started{
     border: none;
     background-color: white;
-    color: var(--blackColor);
+    color: #A770EF;
     padding: 13px 20px 13px 20px;
     border-radius: 10px;
     font-size: 15px;
