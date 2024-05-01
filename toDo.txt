@@ -1,3 +1,20 @@
 #############
 MAKE ALL PAGES RESPONSIVE
 #############
+
+
+@media (max-width: 575.98px) {
+  /* CSS rules for extra small devices */
+}
+
+@media (max-width: 768px) {
+  /* CSS rules for medium devices */
+}
+
+@media (max-width: 992px) {
+  /* CSS rules for medium devices */
+}
+
+@media (max-width: 1200px) {
+  /* CSS rules for large devices */
+}
