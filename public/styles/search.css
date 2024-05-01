@@ -43,9 +43,9 @@
     box-shadow: 5px 5px 0px #d46c4e;
 }
 .search-buttons button:hover{
-    box-shadow: 5px 5px 0px var(--blackColor);
+    box-shadow: 5px 5px 0px white;
     background: #d46c4e;
     background: -webkit-linear-gradient(to right, #d46c4e, #f9ad6a, #f9e07f);
     background: linear-gradient(to right, #d46c4e, #f9ad6a, #f9e07f);
-    color: var(--blackColor);
+    color: #6b1700;
 }
