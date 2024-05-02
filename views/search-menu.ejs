@@ -1,0 +1,20 @@
+<%- include('components/header', {Title: "Search"}) -%>
+<%- include('components/navbar') -%>
+    <div class="MAINSEARCHCONTAINER">
+        <div class="search-items-container">
+            <h1 class="search-header-title">You're searching through <%= searchParameter %></h1>
+            <div class="search-menu-interface">
+                <form action="/Data-handler/search/filter" method="get">
+                    <input type="text" name="search" id="search" placeholder="Enter <%= searchParameter %>">
+                    <input type="hidden" name="para" value="<%= searchParameter %>">
+                    <button type="submit" class="search-submit-button">Search</button>
+                    
+                </form>
+                <a href="/Data-handler/search">
+                    <button class="search-submit-button">Go Back</button>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+<%- include('components/footer'); -%>

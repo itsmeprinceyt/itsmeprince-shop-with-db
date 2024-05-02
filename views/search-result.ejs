@@ -1,0 +1,46 @@
+<%- include('components/header', {Title: "Result"}) -%>
+<%- include('components/navbar') -%>
+    <div class="details-main-container">
+        <h1 class="details-header-title">Search Parameter: "<%=input%>" from <%=item%> </h1>
+        <p class="details-paragraph">The parameter which you selected have found the following results;<br>if you see no data then it's possible the data doesn't exists or you've entered wrong input!</p>
+        <div class="details-main-table">
+            <table class="details-table">
+                    <theader class="table-header">
+                        <th>S.N</th>
+                        <th>Name</th>
+                        <th>Item</th>
+                        <th>UID</th>
+                        <th>Price</th>
+                        <th>Purchase Date</th>
+                        <th>Status</th>
+                        <th>Payment Status</th>
+                    </theader>
+                    <tbody>
+                        <% for (let i = 0; i < allDataFromDB.length; i++) { %>
+                            <tr>
+                                <td><%= i+1 %></td>
+                                <td><%= allDataFromDB[i].name %></td>
+                                <td><%= allDataFromDB[i].item %></td>
+                                <td><%= allDataFromDB[i].UID %></td>
+                                <td>&#8377;<%= allDataFromDB[i].price %></td>
+                                <td><%= allDataFromDB[i].purchaseDate %></td>
+                                <td><%= allDataFromDB[i].isPurchase === true? 'Done' : 'Pending' %></td>
+                                <td><%= allDataFromDB[i].isPaid === true ? 'Paid' : 'Not Paid' %></td>
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+        </div>
+        <div class="search-buttons">
+            <a href="/Data-handler">
+                <button>Menu</button>
+            </a>
+            <a href="/Data-handler/search">
+                <button>Search Menu</button>
+            </a>
+            <a href="/Data-handler/details">
+                <button>Details</button>
+            </a>
+        </div>
+    </div>
+<%- include('components/footer'); -%>

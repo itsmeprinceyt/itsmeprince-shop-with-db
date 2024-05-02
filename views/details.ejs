@@ -1,0 +1,58 @@
+<%- include('components/header', {Title: "Database"}) -%>
+<%- include('components/navbar') -%>
+    <div class="details-main-container">
+        <h1 class="details-header-title">ItsMe Prince | Purchases</h1>
+        <p class="details-paragraph">Here, you can navigate through all the purchases and modify or delete as your require!</p>
+        <div class="details-main-table">
+            <table class="details-table">
+                <theader class="table-header">
+                    <th>S.N</th>
+                    <th>Name</th>
+                    <th>Item</th>
+                    <th>UID</th>
+                    <th>Price</th>
+                    <th>Purchase Date</th>
+                    <th>Status</th>
+                    <th>Payment Status</th>
+                </theader>
+                <tbody>
+                    <% for (let i = 0; i < allDataFromDB.length; i++) { %>
+                        <tr>
+                            <td><%= ((currentPage - 1) * limit) + i + 1 %></td>
+                            <td><%= allDataFromDB[i].name %></td>
+                            <td><%= allDataFromDB[i].item %></td>
+                            <td><%= allDataFromDB[i].UID %></td>
+                            <td>&#8377;<%= allDataFromDB[i].price %></td>
+                            <td><%= allDataFromDB[i].purchaseDate %></td>
+                            <td><%= allDataFromDB[i].isPurchase === true? 'Done' : 'Pending' %></td>
+                            <td><%= allDataFromDB[i].isPaid === true ? 'Paid' : 'Not Paid' %></td>
+                            <td>
+                                <a href="/Data-Handler/modify/<%=allDataFromDB[i]._id%>">
+                                    <button class="<%= allDataFromDB[i]._id %> modify-button">Modify</button>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/Data-Handler/delete/<%=allDataFromDB[i]._id%>">
+                                    <button class="<%= allDataFromDB[i]._id %> delete-button">Delete</button>
+                                </a>
+                            </td>
+
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+        <div class="button-below-data">
+            <a href="/Data-handler/details?page=<%=previousPage%>&limit=15" class="previous-button">
+                <button>
+                    Previous
+                </button>
+            </a>
+            <a href="/Data-handler/details?page=<%=nextPage%>&limit=15" class="next-button">
+                <button>
+                    Next
+                </button>
+            </a>
+        </div>
+    </div>
+<%- include('components/footer'); -%>
