@@ -88,3 +88,66 @@
     background: linear-gradient(to right, #2193b0, #53b9cf, #6dd5ed);
     color: black;
 }
+
+@media (max-width: 796px) {
+    .details-main-container{
+        width:700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .details-main-container{
+        width:400px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .details-table{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .details-table tbody{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .details-table tr{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .details-main-table th {
+        color: white;
+        font-size: 13px; 
+        border: 1px solid rgba(255, 255, 255, 0.192);
+        padding: 5px;
+        width: 100%;
+    }
+    
+    .details-main-table td, .details-main-table tr{
+        
+        width: 200px;
+        background-color: black;
+        border: none;
+        color: black;
+        text-align: center;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right:10px;
+    }
+    .details-main-table td{
+        background-color: white;
+        border: 1px solid rgba(255, 255, 255, 0.192);
+        color: black;
+    }
+    .button-below-data{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+}

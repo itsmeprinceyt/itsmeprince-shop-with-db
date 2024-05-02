@@ -48,3 +48,9 @@
     background-color: var(--blackColor);
     color: white;
 }
+
+@media (max-width: 556px){
+    .MainNoteInMiddle{
+        width: 450px;
+    }
+}

@@ -42,14 +42,21 @@
     
 }
 
-.form-side-image{
+.form-side-image,
+.modify-side-image{
     margin-top: 10px;
     margin-bottom:6px;
     border-radius: 5px;
-    background: url("../images/zhongli.jpg");
+    background: url("../images/ningguang.jpg");
     background-position: center; /* Center the background image */
     background-size:cover;
     width: 300px;
+}
+
+.modify-side-image{
+    background: url("../images/zhongli.jpg");
+    background-position: center; /* Center the background image */
+    background-size:cover;
 }
 
 .form-submit-button{
@@ -71,6 +78,28 @@
     box-shadow: 5px 5px 0px white;
     color: var(--blackColor);
 }
+
+.save-button{
+    margin-top: 10px;
+    border: none;
+    height: 40px;
+    width: 180px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: #d46c4e;
+    box-shadow: 5px 5px 0px #d46c4e;
+    transition: all 0.4s ease;
+}
+
+.save-button:hover{
+    background: #d46c4e;
+    background: -webkit-linear-gradient(to right, #d46c4e, #f9ad6a, #f9e07f);
+    background: linear-gradient(to right, #d46c4e, #f9ad6a, #f9e07f);
+    box-shadow: 5px 5px 0px white;
+    color: #621904;
+}
+
 .form-input-title,
 #isPurchased,
 #isPaid{

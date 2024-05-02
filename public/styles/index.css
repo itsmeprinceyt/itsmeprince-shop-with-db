@@ -23,21 +23,14 @@ a:visited{
     right: 0;
     height: 50px;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
+    gap: 10px;
     padding-left: 10px;
     padding-right: 10px;
     z-index: 2;
 }
-
-.navbar .home{
-    display: flex;
-    gap: 10px;
-}
-
-.navbar .list{
-    position: absolute;
-    right: 10px;
+.navbar div{
     display: flex;
     gap: 10px;
 }
@@ -57,7 +50,6 @@ a:visited{
     justify-content: space-evenly;
     align-items: center;
     box-shadow: 0px 0px 10px black;
-
 }
 .container{
     width: 450px;
@@ -104,5 +96,55 @@ a:visited{
 .profile-photo{
     width: 250px;
     border-radius: 50%;
-
 }
+
+@media (max-width: 992px) {
+    .main{
+        width: 600px;
+    }
+    .container-for-photo,
+    .profile-photo{
+        width: 220px;
+    }
+}
+@media (max-width: 768px) {
+    .main{
+        width: 550px;
+    }
+    .container-for-photo,
+    .profile-photo{
+        width: 200px;
+    }
+}
+
+@media (max-width: 588px){
+    .main{
+        width: 500px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main{
+        width: 400px;
+        height: 200px;
+    }
+    .container{
+        width: 200px;
+        color: white;
+    }
+    .container h1{
+        font-size: 20px;
+        margin:0;
+        font-weight: bold;
+    }
+    .container p{
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    .container-for-photo,
+    .profile-photo{
+        width: 150px;
+    }
+}
+  
+  

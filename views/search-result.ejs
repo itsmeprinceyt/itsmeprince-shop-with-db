@@ -5,7 +5,7 @@
         <p class="details-paragraph">The parameter which you selected have found the following results;<br>if you see no data then it's possible the data doesn't exists or you've entered wrong input!</p>
         <div class="details-main-table">
             <table class="details-table">
-                    <theader>
+                    <theader class="table-header">
                         <th>S.N</th>
                         <th>Name</th>
                         <th>Item</th>
@@ -22,7 +22,7 @@
                                 <td><%= allDataFromDB[i].name %></td>
                                 <td><%= allDataFromDB[i].item %></td>
                                 <td><%= allDataFromDB[i].UID %></td>
-                                <td><%= allDataFromDB[i].price %></td>
+                                <td>&#8377;<%= allDataFromDB[i].price %></td>
                                 <td><%= allDataFromDB[i].purchaseDate %></td>
                                 <td><%= allDataFromDB[i].isPurchase === true? 'Done' : 'Pending' %></td>
                                 <td><%= allDataFromDB[i].isPaid === true ? 'Paid' : 'Not Paid' %></td>
